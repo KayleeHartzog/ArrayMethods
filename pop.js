@@ -16,9 +16,7 @@ var readline = require('readline-sync')
 console.log("Lets do a count down!")
 
 while (number.length != 0) {
-    //console.log("This is the length", number.length)
     var output = number.length
-    //console.log(output)
     console.log(number[output-1])
     number.pop()
 }
