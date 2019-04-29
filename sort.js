@@ -15,8 +15,11 @@
 var readline = require('readline-sync')
 //var students = ["Geroge", "Melanie", "Sam", "Josh", "Keith", "Logan", "Heather", "Justin", "Kaylee", "Jesse", "Melissa", "Shawn"]
 var students = []
+var students2 = []
 var input
+var input2
 
+// Sort Without a function
 console.log("\nMake a list of the students in your class. Type 'done' when you are finished\n")
 while (input != "done") {
     input = readline.question("Please enter a name (or enter 'done'): ")
@@ -31,4 +34,24 @@ var answer = readline.question("Would you like to sort your class list?(Y/N) ")
 if (answer == "Y" || answer == "y") {
     students.sort();
     console.log("Sorted list: ", students)
+}
+
+
+// Sort with a function
+console.log("\nMake a list of the students in your class. Type 'done' when you are finished\n")
+while (input2 != "done") {
+    input2 = readline.question("Please enter a name (or enter 'done'): ")
+    if (input2 != "done") {
+        students2.push(input2)
+    }
+
+}
+
+console.log("List of students: ", students2)
+var answer = readline.question("Would you like to sort your class list?(Y/N) ")
+if (answer == "Y" || answer == "y") {
+    students2.sort(function(a,b) {
+        return b <= a
+    });                  // <= Here is the function
+    console.log("Sorted list: ", students2)
 }
