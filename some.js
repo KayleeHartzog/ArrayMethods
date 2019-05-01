@@ -17,13 +17,13 @@ var readline = require('readline-sync')
 var responses = ['yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'no']
 
 function checkReponses(value) {
-    return value == 'yes'
+    return value == 'no'
 }
 
 console.log("Checking reponses:\n")
 var check = responses.some(checkReponses)
 
-if (check == true) {
+if (check == false) {
     console.log("Everyone is going to the meeting.\n")
 }
 else {
