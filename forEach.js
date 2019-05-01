@@ -19,14 +19,19 @@ var sum = 0
 
 while (item != "done") {
     item = readline.question("What data would you like to collect?(Type 'done' when done.) ")
-    data.push(item)
+    if (item !== 'done') {    
+        item = Number(item);
+        if (!Number.isNaN(item)) {
+            data.push(item)
+        }
+    }
 }
 
 var question = readline.question("Would you like to get the sum of this data?(Y/N) ")
 if (question == "Y" || question == "y") {
-    data.forEach(function(data) {
-        var num = parseInt(data)
-        sum += (num - 0)
+    console.log(data);
+    data.forEach(function(item) {
+        sum += item
     })
     console.log("This is the sum of your data: ", sum)
 }
