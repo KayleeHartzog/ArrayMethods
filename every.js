@@ -14,7 +14,6 @@
 // to check and see if the hours are being meet.
 
 //5. Build your real world example.
-var readline = require('readline-sync')
 var week01 = [30, 40, 16, 15, 15, 17]
 var week02 = [30, 40, 15, 13, 12, 23]
 
