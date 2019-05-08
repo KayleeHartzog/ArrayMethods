@@ -20,7 +20,7 @@ var hours = [43, 54, 24, 34, 33, 64, 35, 41, 43, 26]
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue
 
-var sum = hours.reduce(reducer)
+var sum = hours.reduce(reducer, 32)
 
 console.log("\nTotal hours for this project:\n" ,sum)
 
